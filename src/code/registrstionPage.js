@@ -32,15 +32,15 @@ function Registration(){
      }
 
     return (<div className="complete">
-                Title:<input className="title" type="text" value={title} onChange={(e)=>{settitle(e.target.value)}}/>
+                <label>Title:  <input className="title" type="text" value={title} onChange={(e)=>{settitle(e.target.value)}}/></label>
                 <br/>
-                Name:<input className="name" type="text" value={firstName} onChange={(e)=>{fName(e)}}/>
+                <label>Name:   <input  className="title" type="text" value={firstName} onChange={(e)=>{fName(e)}}/> </label>
                 <br/>
-                Phone:<input className="phone" type="text" value={phone} onChange={(e)=>{setPhone(e.target.value)}}/>
+                <label> Phone: <input className="title" type="text" value={phone} onChange={(e)=>{setPhone(e.target.value)}}/></label>
                 <br/>
-                Email:<input className="email" type="text" value={email} onChange={(e)=>{setEmail(e.target.value)}}/>
+                <label>Email:  <input className="title" type="text" value={email} onChange={(e)=>{setEmail(e.target.value)}}/></label>
                 <br/>
-                Password:<input className="password" type="text" value={Password} onChange={(e)=>{setPassword(e.target.value)}}/>
+                <label> Password:  <input className="title" type="text" value={Password} onChange={(e)=>{setPassword(e.target.value)}}/></label>
                 <br/>
                 <button className="button" onClick={onSubmit}>Submit</button>
 

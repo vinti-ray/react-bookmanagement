@@ -1,3 +1,8 @@
+*{
+    background-color: cadetblue;
+}
+
+
 .complete{
     display: flex;
     justify-content: center;
@@ -6,9 +11,28 @@
      font-family: 'Poppins',sans-serif;
      background-color: skyblue;
      flex-direction: column;
-     margin: 50px;
+     margin-left:300px;
+     margin-right: 300px;
  }
-
+.button{
+    width:30px;
+    height: 30px;
+   
+    border-radius: 20px;
+    background-color: rgb(233, 24, 9);
+    display: flex;
+    justify-content: column;
+    padding-left: 150px;
+    padding-top: 5px;
+   
+    /* text-align: center; */
+    
+}
+.title{
+    display: flex;
+    justify-content: column;
+    background-color: white;
+}
  /* .submit{ */
    /* margin:40%;
    background-color: #1b0103; /* Green */
