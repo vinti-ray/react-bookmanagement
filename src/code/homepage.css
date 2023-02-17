@@ -1,0 +1,39 @@
+.finaldata{
+    display: flex;
+    background-color: rgb(83, 70, 52);
+     padding: 16px;
+     gap: 10px;
+ 
+}
+.image{
+    width: 90px;
+    height:90px
+
+}
+.data{
+    display: flex;
+    flex-direction: column;
+ 
+    align-items: center;
+    background-color: rgb(101, 118, 118);
+}
+#card{
+    display: flex;
+    flex-direction: column;
+
+
+}
+.header{
+    background-color: rgb(177, 110, 51);
+}
+/* .user-container .name{
+font-size: 18px;
+font-weight: bold;
+}
+
+
+.user-container .details{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+} */
