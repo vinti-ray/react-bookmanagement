@@ -1,5 +1,6 @@
 import axios from "axios"
 import React, {useState,useEffect} from "react"
+import "./createBook.css"
 
 function CreateBook(){
   const [title,settitle]=useState("")
@@ -28,20 +29,20 @@ const  onSubmit=async (e)=>{
   }
        
 
-  return (<div>
-          Title:<input type="text" value={title} onChange={(e)=>{settitle(e.target.value)}} />
+  return (<div className="box">
+          Title:<input className="title" type="text" value={title} onChange={(e)=>{settitle(e.target.value)}} />
           <br/>
           {/* Book Cover:  <div>
             <img className="preview" src={previewImage} alt="" />
           </div> */}
 
-          Excerpt:<input type="text" value={excerpt} onChange={(e)=>{setExcerpt(e.target.value)}} />
+          Excerpt:<input className="title" type="text" value={excerpt} onChange={(e)=>{setExcerpt(e.target.value)}} />
           <br/>
-          ISBN:<input type="text" value={ISBN} onChange={(e)=>{setISBN(e.target.value)}} />
+          ISBN:<input className="title" type="text" value={ISBN} onChange={(e)=>{setISBN(e.target.value)}} />
           <br/>
-          Category:<input type="text" value={category} onChange={(e)=>{setcategory(e.target.value)}} />
+          Category:<input className="title" type="text" value={category} onChange={(e)=>{setcategory(e.target.value)}} />
           <br/>
-          subcategory:<input type="text" value={subcategory} onChange={(e)=>{setSubcategory(e.target.value)}} />
+          subcategory:<input  className="title" type="text" value={subcategory} onChange={(e)=>{setSubcategory(e.target.value)}} />
 
           <button onClick={onSubmit}>Submit</button>
   </div>)

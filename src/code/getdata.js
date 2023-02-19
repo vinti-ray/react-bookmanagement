@@ -1,35 +1,44 @@
-import axios from "axios"
-import React, {useState,useEffect} from "react"
-
-function FetchApi(){
-  const [list,setList]=useState()
-
-    const FetchApi=()=>{
-      if(!list){
-  
-     axios.get("http://localhost:3009/books").then((response)=>{setList(response.data)})
-     
-    }
-  }
+import axios from 'axios'
+import React, { useEffect, useState } from 'react'
+import "./getData.css"
 
 
-return(
-    <div>
-        <h1>List {FetchApi()}</h1>
-        
 
-        {list && list.length>0 &&(
-         <ol>
-           {list.map(a=>{
 
-                return <li key={a.title}>{a.title}
-                </li>
-           })}
+function BookList() {
+    const [books, SetBooks] = useState([])
+    
+    let token = localStorage.getItem('token');
 
-         </ol>
-        )}
+    useEffect(() => {
+        axios.get("http://localhost:3009/books", { headers: { "x-api-key": token } }).then((responce) => { SetBooks(responce.data.data) })
+            .catch((err) => alert(err.message))
+    }, [])
 
-    </div>
-)
+
+    return (
+        <div id='bookListBigBox'>
+            <>
+    
+                <div id="allList">
+                    {books.map((x, i) => {
+                        return (<div className="itemBox" key={i}>
+
+                            <img id='books' src={(x.bookCover) ? `${x.bookCover}` : "https://static.scientificamerican.com/sciam/cache/file/1DDFE633-2B85-468D-B28D05ADAE7D1AD8_source.jpg?w=590&h=800&D80F3D79-4382-49FA-BE4B4D0C62A5C3ED"} alt='error' />
+                            <span>{x.title}</span>
+                            <span>User : {x.userId}</span>
+                            <span>Reviews : {x.reviews}</span>
+                            
+                            <a href={`/homepage/${x._id}`}><button id='btn1' className="btn btn-primary" >More Details</button></a>
+                        </div>)
+                    })}
+                </div>
+            </>
+            <div id='sideBox'>
+                <a id='cbBtn' href='/createBook'>Create Book</a>
+            </div>
+        </div>
+    )
 }
-export default FetchApi
+
+export default BookList

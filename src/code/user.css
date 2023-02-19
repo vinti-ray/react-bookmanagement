@@ -1,1 +1,40 @@
+#bigBox1 {
+    height: 100vh;
+    border: 0.2px solid white;
+   
+    background-image: url(https://th.bing.com/th/id/OIP.BA9BQ4dO481cv46BgixkQgHaET?pid=ImgDet&rs=1);
+    background-repeat: no-repeat;
+    background-size: 50% 100vh;
+   
+}
+
+.loginBox {
+    /* border: 2px solid red; */
+    width: 28%;
+    height: 50vh;
+    margin: 7% 62%;
+    color: #115fbc;
+    font-weight: bold;
+}
+
+#btn1 {
+    margin-left: 13%;
+    background-color: rgb(217, 83, 38);
+    margin-top: 10%;
+    border: 1px solid rgb(9, 7, 9);
+    width: 80%;
+}
+
+.headingLogin {
+    /* border: 2px solid red; */
+    width: fit-content;
+    height: fit-content;
+    margin: 4% 62%;
+    color: #115fbc;
+    font-weight: bold;
+}
+#login {
+    font-weight: bold;
+    color: rgb(202, 38, 217);
+}
 

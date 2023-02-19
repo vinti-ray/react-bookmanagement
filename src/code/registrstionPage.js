@@ -9,6 +9,9 @@ function Registration(){
    const [phone,setPhone]=useState("")
    const [email,setEmail]=useState("") 
    const [Password,setPassword]=useState("")
+   const [street, setStreet] = useState("")
+   const [city, setCity] = useState("")
+   const [pincode, setPincode] = useState("")
     const  fName=((e)=>{
             setFirstName(e.target.value)
         })
@@ -21,7 +24,10 @@ function Registration(){
             name:firstName,
             email:email,
             phone:phone,
-            password:Password
+            password:Password,
+            street:street,
+            city:city,
+            pincode:pincode
         }
        const submit=await axios.post("http://localhost:3009/register",data)
        console.log(submit);
@@ -42,7 +48,15 @@ function Registration(){
                 <br/>
                 <label> Password:  <input className="title" type="text" value={Password} onChange={(e)=>{setPassword(e.target.value)}}/></label>
                 <br/>
+                <label> Street:  <input className="title" type="text" value={street} onChange={(e)=>{setStreet(e.target.value)}}/></label>
+                <br/>
+                <label> City:  <input className="title" type="text" value={city} onChange={(e)=>{setCity(e.target.value)}}/></label>
+                <br/>
+                <label> Pincode:  <input className="title" type="text" value={pincode} onChange={(e)=>{setPincode(e.target.value)}}/></label>
+                <br/>
                 <button className="button" onClick={onSubmit}>Submit</button>
+                <p className="signin">if you are an already registered user please  <a href="/login"> sign in</a></p>
+
 
     </div>)
 }

@@ -16,21 +16,21 @@ const Navbar = () => {
         <Bars />
   
         <NavMenu>
-          <NavLink to='/' activeStyle>
+          <NavLink to='/homepage' activeStyle>
             Home Page
           </NavLink>
-          <NavLink to='/#' activeStyle>
+          {/* <NavLink to='/#' activeStyle>
             pending
-          </NavLink>
-          <NavLink to='/#' activeStyle>
+          </NavLink> */}
+          {/* <NavLink to='/#' activeStyle>
             pending
-          </NavLink>
+          </NavLink> */}
           <NavLink to='/createbook' activeStyle>
             Your book
           </NavLink>
-          <NavLink to='/#' activeStyle>
+          {/* <NavLink to='/#' activeStyle>
             pending
-          </NavLink>
+          </NavLink> */}
           <NavLink to='/registration' activeStyle>
             Sign Up
           </NavLink>
