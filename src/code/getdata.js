@@ -24,7 +24,7 @@ function BookList() {
                     {books.map((x, i) => {
                         return (<div className="itemBox" key={i}>
 
-                            <img id='books' src={(x.bookCover) ? `${x.bookCover}` : "https://static.scientificamerican.com/sciam/cache/file/1DDFE633-2B85-468D-B28D05ADAE7D1AD8_source.jpg?w=590&h=800&D80F3D79-4382-49FA-BE4B4D0C62A5C3ED"} alt='error' />
+                            <img id='books' src={(x.bookCover) ? `${x.bookCover}` : "https://ashmagautam.files.wordpress.com/2013/11/mcj038257400001.jpg"} alt='error' />
                             <span>{x.title}</span>
                             <span>User : {x.userId}</span>
                             <span>Reviews : {x.reviews}</span>
@@ -34,9 +34,7 @@ function BookList() {
                     })}
                 </div>
             </>
-            <div id='sideBox'>
-                <a id='cbBtn' href='/createBook'>Create Book</a>
-            </div>
+
         </div>
     )
 }
