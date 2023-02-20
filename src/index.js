@@ -1,37 +1,42 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import {BrowserRouter,Routes,Route} from "react-router-dom"
-import './index.css';
+// import './index.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.min.js';
 
 
-import User from './code/user';
-import HomePage from './code/homePage';
-import Registration from './code/registrstionPage';
-import FetchApi from './code/getdata';
-import CreateBook from './code/createBook';
-import UpdateBook from './code/updateBook';
-import BookList  from './code/getdata';
-import Navbar from './code/navbar';
-import OneBook from './code/oneBook';
+
+import Header from './component.js/nav';
+import Login from './component.js/loginuser';
+import HomePage from './component.js/homePage';
+import RegisterUser from './component.js/createUser';
+import CreateBookPost from './component.js/createBook';
+import BookPost from './component.js/oneBook';
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
 <BrowserRouter>
-<Navbar/>
+<Header/>
 <Routes>
 
-<Route path="/" element={<HomePage/>}/>
-  <Route path="/login" element={<User/>}/>
-  <Route path="registration" element={<Registration/>}/>
-  <Route path="/getdata" element={<FetchApi/>}/>
-  <Route path="/createbook" element={<CreateBook/>}/>
-  <Route path="/updatebook" element={<UpdateBook/>}/>
+<Route path="/" element={<HomePage/>}>
+<Route path='/:bookId' element={<HomePage />} />
+</Route> 
 
+
+  <Route path="/login" element={<Login/>}/>
+  <Route path="registration" element={<RegisterUser/>}/>
+  {/* <Route path="/getdata" element={<FetchApi/>}/> */}
+  <Route path="/createbook" element={<CreateBookPost/>}/>
+  {/* <Route path="/updatebook" element={<UpdateBook/>}/> */}
+{/* 
   <Route path="/homepage" element={<BookList/>}>
-  <Route path=':bookId' element={<OneBook />} />
-  </Route>
-
-  {/* <Route path="/onebook" element={<OneBook/>}/> */}
+  <Route path=':bookId' element={<BookDetails />} />
+  </Route> */}
+{/* 
+  <Route path="/onebook" element={<OneBook/>}/> */}
 </Routes>
 </BrowserRouter>
 );
