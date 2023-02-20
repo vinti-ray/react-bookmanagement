@@ -2,6 +2,7 @@ import React,{useState,useEffect} from 'react';
 import { useParams } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 import { Container, Row, Col, Card, Button } from 'react-bootstrap';
+
 import axios from 'axios';
 // import { Card } from 'react-bootstrap';
 
@@ -42,7 +43,7 @@ function HomePage() {
                         <Card.Text>
                           {books.reviews}
                         </Card.Text>
-                        <Button variant="primary" >update Book</Button>
+                        <Button variant="primary" href='/updatebook' >update Book</Button>
                         <Button variant="primary" onClick={deleteApi} >delete Book</Button>
                         <Button variant="primary" href="givereview">give review</Button>
                         <Button variant="primary" href="/showreview">show review</Button>
