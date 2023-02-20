@@ -13,7 +13,10 @@ import HomePage from './component.js/homePage';
 import RegisterUser from './component.js/createUser';
 import CreateBookPost from './component.js/createBook';
 import UpdateBook from './component.js/updatebook';
+// import UpdateBook from './component.js/updatebook';
 import BookPost from './component.js/oneBook';
+import ReviewPage from './component.js/review';
+import BookReviews from './component.js/getReview';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -32,6 +35,8 @@ root.render(
   {/* <Route path="/getdata" element={<FetchApi/>}/> */}
   <Route path="/createbook" element={<CreateBookPost/>}/>
   <Route path="/updatebook" element={<UpdateBook/>}/>
+  <Route path="/givereview" element={<ReviewPage/>}/>
+  <Route path="/getreview" element={<BookReviews/>}/>
 {/* 
   <Route path="/homepage" element={<BookList/>}>
   <Route path=':bookId' element={<BookDetails />} />

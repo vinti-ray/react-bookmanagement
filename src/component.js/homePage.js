@@ -51,7 +51,7 @@ function HomePage() {
                         </Card.Text>
                         <Button variant="primary" href='/updatebook' >update Book</Button>
                         <Button variant="primary" onClick={deleteApi} >delete Book</Button>
-                        <Button variant="primary" href="givereview">give review</Button>
+                        <Button variant="primary" href="/givereview">review this page</Button>
                         <Button variant="primary" href="/showreview">show review</Button>
                         </Card.Body>
                    
