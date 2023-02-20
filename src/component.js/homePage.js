@@ -1,6 +1,7 @@
 import React,{useState,useEffect} from 'react';
 import { useParams } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
+import { Redirect } from 'react-router-dom';
 import { Container, Row, Col, Card, Button } from 'react-bootstrap';
 
 import axios from 'axios';
@@ -13,14 +14,19 @@ function HomePage() {
     console.log(bookId)
     const navigate = useNavigate();
     useEffect(() => {
+   if(!token){
+       alert("please login first")
+        navigate('/login');
+   }
+
         if(bookId){
             axios.get(`http://localhost:3001/books/${bookId}`, { headers: { "x-auth-key": token } }).then((responce) => { SetBooks(responce.data.data) })
-            .catch((err) => alert(err.message))
+        
 
 
         }else{
             axios.get("http://localhost:3001/books", { headers: { "x-auth-key": token } }).then((responce) => { SetBooks(responce.data.data) })
-            .catch((err) => alert(err.message))
+         
         }
 
     }, [])

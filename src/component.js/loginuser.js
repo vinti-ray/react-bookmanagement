@@ -37,6 +37,7 @@ function Login() {
               <Form.Control type="password" value={password} onChange={(event) => setPassword(event.target.value)} />
             </Form.Group>
             <Button variant="primary" type="submit">Sign In</Button>
+            <p>If you are not a registered user please <a href='/registration'>sign up</a></p>
           </Form>
         </Col>
       </Row>
